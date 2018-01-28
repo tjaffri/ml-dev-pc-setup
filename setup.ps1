@@ -7,12 +7,6 @@ choco install git -y
 # Install python 3
 choco install python -y
 
-# Install pipenv
-
-# Install Tensorflow with virtualenv (instructions at https://www.tensorflow.org/install/install_windows)
-
-# Validate Tensorflow installation per https://www.tensorflow.org/install/install_windows#validate_your_installation
-
 # Install vscode
 choco install visualstudiocode -y
 
