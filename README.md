@@ -24,12 +24,10 @@ See comments in ``setup.ps1`` for more information. This is an automated script 
 To begin setup, launch Powershell **as an admin** and paste in the following:
 
 ```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tjaffri/ml-dev-mac-setup/master/setup.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tjaffri/ml-dev-pc-setup/master/setup.ps1'))
 ```
 
-> **Note**: Set up is not completely unattended and will break occasionally to ask for credentials etc.
-
-After setup is complete, Chrome and Visual Studio Code will launch automatically. You can read the docs, set defaults, and pin these to the TAskbar.
+After setup is complete, Chrome and Visual Studio Code will launch automatically. You can read the docs, set defaults, and pin these to the Taskbar.
 
 To finish setting up Visual Studio Code, follow the instructions here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, and simply select the python 3 environment in vscode.
 
@@ -53,5 +51,8 @@ python models/tutorials/image/mnist/convolutional.py
 ```
 
 The last line will print out per-step timing. With a CPU-only setup (e.g. a PC without a tensorflow-supported Nvidia GPU), you should expect ~110ms per step. With a fast GPU setup you should get <10ms per step, a 10X improvement.
+
+# Update
+...
 
 Please enjoy responsibly.
