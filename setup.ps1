@@ -8,7 +8,7 @@ choco install git -y
 choco install python -y
 
 # Install vscode
-choco install visualstudiocode -y
+choco install visualstudiocode --params '/NoDesktopIcon' -y
 
 # Launch vscode (makes it easier to pin it to the Taskbar, and you see some docs as well)
 code
