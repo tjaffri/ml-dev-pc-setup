@@ -2,10 +2,10 @@
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # Install git
-choco install git
+choco install git -y
 
 # Install python 3
-choco install python
+choco install python -y
 
 # Install pipenv
 pip install pipenv
@@ -15,10 +15,10 @@ pip install pipenv
 # Validate Tensorflow installation per https://www.tensorflow.org/install/install_windows#validate_your_installation
 
 # Install vscode
-choco install visualstudiocode
+choco install visualstudiocode -y
 
 # Launch vscode (makes it easier to pin it to the Taskbar, and you see some docs as well)
 code
 
 # Install chrome
-choco install googlechrome
+choco install googlechrome -y
