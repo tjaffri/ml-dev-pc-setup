@@ -8,7 +8,6 @@ choco install git -y
 choco install python -y
 
 # Install pipenv
-pip install pipenv
 
 # Install Tensorflow with virtualenv (instructions at https://www.tensorflow.org/install/install_windows)
 
