@@ -65,18 +65,12 @@ pip3 install --upgrade tensorflow
 More information [here](https://www.tensorflow.org/install/install_windows#validate_your_installation).
 
 # Use
-You can enter the tensorflow virtual environment in Powershell at any time by running:
-
-```powershell
-source ~/tensorflow/bin/activate
-```
+...
 
 # Test
-``setup.sh`` does basic Tensorflow setup validation. In addition, you can benchmark your setup to make sure it is performing well by running:
+In addition to the validation above, you can benchmark your setup to make sure it is performing well by running:
 
 ```powershell
-cd ~
-source ~/tensorflow/bin/activate
 mkdir Source
 cd Source
 git clone https://github.com/tensorflow/models.git
