@@ -34,7 +34,7 @@ Assuming you have a compatible NVIDIA GPU, follow the instructions [here](https:
 
 1. You can download Visual Studio 2017 Community Edition for free [here](visualstudio.com/downloads).
 2. During setup, select the Desktop development with C++ workload to install the appropriate compiler.
-> Note: CUDA 9.1 is not compatible with Tensorflow binaries at the time of writing (you can compile from sources and that should work). So be careful what version of CUDA you install. See [here](https://github.com/tensorflow/tensorflow/issues/16014) for more information.
+> Note: CUDA 9.1 is not compatible with Tensorflow 1.5 binaries at the time of writing (you can compile from sources and that should work). So be careful what version of CUDA you install. See [here](https://github.com/tensorflow/tensorflow/releases) to check the current release of tensorflow... version 1.6 (when released) should be compatible with CUDA 9.1.
 3. When installing the CUDA tools per the instructions in the link above, make sure you install the base installer as well as any patches available.
 4. When building the deviceQuery and bandwidthTest applications per CUDA tools setup documentation, you may need to retarget the solution to your current Windows SDK version to build successfully. The pre-built binaries may not work.
 
