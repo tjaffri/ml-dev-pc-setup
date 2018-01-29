@@ -66,7 +66,7 @@ pip3 install --upgrade tensorflow
 More information [here](https://www.tensorflow.org/install/install_windows#validate_your_installation).
 
 # Use
-...
+python 3 and tensorflow are available globally in this setup. No ``virtualenv`` needed to access tensorflow. Use ``pipenv`` to manage dependencies other than tensorflow for individual projects.
 
 # Test
 In addition to the validation above, you can benchmark your setup to make sure it is performing well by running:
@@ -75,12 +75,18 @@ In addition to the validation above, you can benchmark your setup to make sure i
 mkdir Source
 cd Source
 git clone https://github.com/tensorflow/models.git
-python models/tutorials/image/mnist/convolutional.py
+python models\tutorials\image\mnist\convolutional.py
 ```
 
 The last line will print out per-step timing. With a CPU-only setup (e.g. a PC without a tensorflow-supported Nvidia GPU), you should expect ~110ms per step. With a fast GPU setup you should get <10ms per step, a 10X improvement.
 
 # Update
-...
+To update all chocolatey packages, type
+
+```bash
+choco upgrade all
+```
+
+To update CUDA and Tensorflow etc you need to peform the steps above all over again.
 
 Please enjoy responsibly.
