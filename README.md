@@ -30,7 +30,11 @@ After setup is complete, Visual Studio Code will launch automatically. You can r
 To finish setting up Visual Studio Code, follow the instructions here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, and simply select the python 3 environment in vscode.
 
 # Configure NVIDIA GPU
-Assuming you have a compatible NVIDIA GPU, follow the instructions [here](https://www.tensorflow.org/install/install_windows#requirements_to_run_tensorflow_with_gpu_support) to configure it.
+Assuming you have a compatible NVIDIA GPU, follow the instructions [here](https://www.tensorflow.org/install/install_windows#requirements_to_run_tensorflow_with_gpu_support) to configure it. Here are some additional notes on setup:
+
+1. You can download Visual Studio 2017 Community Edition for free [here](visualstudio.com/downloads).
+2. During setup, select the Desktop development with C++ workload to install the appropriate compiler.
+3. 
 
 # Configure Python
 To configure Python, **close and relaunch** Powershell **as an admin** and perform the following steps:
