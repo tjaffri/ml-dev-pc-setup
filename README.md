@@ -30,7 +30,7 @@ After setup is complete, Visual Studio Code will launch automatically. You can r
 
 To finish setting up Visual Studio Code, follow the instructions here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, and simply select the python 3 environment in vscode.
 
-I like the following global settings. You can go to ``File > Preferences > Settings`` or just do ``Ctrl-comma`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides)
+I like the following global settings. You can go to ``File > Preferences > Settings`` or just do ``Ctrl-comma`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides):
 
 ```
 {
@@ -41,7 +41,7 @@ I like the following global settings. You can go to ``File > Preferences > Setti
     // The path of the shell that the terminal uses on Windows. When using shells shipped with Windows (cmd, PowerShell or Bash on Ubuntu).
     "terminal.integrated.shell.windows": "C:\\Python36\\Scripts\\pipenv.exe",
     // The command line arguments to use when on the Windows terminal.
-    "terminal.integrated.shellArgs.windows": [],
+    "terminal.integrated.shellArgs.windows": ["shell"],
 }
 ```
 
@@ -97,7 +97,7 @@ python models\tutorials\image\mnist\convolutional.py
 The last line will print out per-step timing. With a CPU-only setup (e.g. a PC without a tensorflow-supported Nvidia GPU), you should expect ~110ms per step. With a fast GPU setup you should get <10ms per step, a 10X improvement.
 
 # Update
-To update all chocolatey packages, type
+To update all chocolatey packages, type:
 
 ```bash
 choco upgrade all
