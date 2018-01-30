@@ -34,12 +34,20 @@ Here are some recommended global settings for vscode. You can go to ``File > Pre
 
 ```
 {
-    // Controls auto save of dirty files. Accepted values:  'off', 'afterDelay', 'onFocusChange' (editor loses focus), 'onWindowChange' (window loses focus). If set to 'afterDelay', you can configure the delay in 'files.autoSaveDelay'.
-    "files.autoSave": "afterDelay",
-      // Commit all changes when there are no staged changes.
-    "git.enableSmartCommit": true,
-    // The path of the shell that the terminal uses on Windows. When using shells shipped with Windows (cmd, PowerShell or Bash on Ubuntu).
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\git-bash.exe",
+  // Controls auto save of dirty files. Accepted values:  'off', 'afterDelay', 'onFocusChange' (editor loses focus), 'onWindowChange' (window loses focus). If set to 'afterDelay', you can configure the delay in 'files.autoSaveDelay'.
+  "files.autoSave": "afterDelay",
+  // Commit all changes when there are no staged changes.
+  "git.enableSmartCommit": true,
+  // The path of the shell that the terminal uses on Windows. When using shells shipped with Windows (cmd, PowerShell or Bash on Ubuntu).
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  // Arguments passed in. Each argument is a separate item in the array.
+  "python.linting.pylintArgs": [
+    "--disable=E0401"
+  ],
+  // Arguments passed in. Each argument is a separate item in the array.
+  "python.formatting.autopep8Args": [
+    "--max-line-length=120"
+  ],
 }
 ```
 
