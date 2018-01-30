@@ -7,8 +7,11 @@ choco install git -y
 # Install python 3
 choco install python -y
 
-# Install vscode
+# Install vscode, and related extensions/plugins
 choco install visualstudiocode --params '/NoDesktopIcon' -y
+code --install-extension ms-python.python
+pip install --upgrade pylint
+pip install --upgrade autopep8
 
 # Launch vscode (makes it easier to pin it to the Taskbar, and you see some docs as well)
 code
