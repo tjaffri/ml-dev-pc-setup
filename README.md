@@ -30,7 +30,14 @@ After setup is complete, Visual Studio Code will launch automatically. You can r
 
 To finish setting up Visual Studio Code, follow the instructions here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, and simply select the python 3 environment in vscode.
 
-I like the following global settings. You can go to ``File > Preferences > Settings`` or just do ``Ctrl-comma`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides):
+One tip is to install ``pylint`` (a code linter) and ``autopep8`` (a code formatter) globally so they are available across virtual environments. Type:
+
+```powershell
+pip install --upgrade pylint
+pip install --upgrade autopep8
+```
+
+Here are some recommended global settings for vscode. You can go to ``File > Preferences > Settings`` or just do ``Ctrl-comma`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides):
 
 ```
 {
