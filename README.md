@@ -35,7 +35,7 @@ I like the following global settings. You can go to ``File > Preferences > Setti
 ```
 {
     // Controls auto save of dirty files. Accepted values:  'off', 'afterDelay', 'onFocusChange' (editor loses focus), 'onWindowChange' (window loses focus). If set to 'afterDelay', you can configure the delay in 'files.autoSaveDelay'.
-    "files.autoSave": "off",
+    "files.autoSave": "afterDelay",
     // Controls the delay in ms after which a dirty file is saved automatically. Only applies when 'files.autoSave' is set to 'afterDelay'
     "files.autoSaveDelay": 500,
     // The path of the shell that the terminal uses on Windows. When using shells shipped with Windows (cmd, PowerShell or Bash on Ubuntu).
