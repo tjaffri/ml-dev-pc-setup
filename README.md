@@ -36,12 +36,10 @@ I like the following global settings. You can go to ``File > Preferences > Setti
 {
     // Controls auto save of dirty files. Accepted values:  'off', 'afterDelay', 'onFocusChange' (editor loses focus), 'onWindowChange' (window loses focus). If set to 'afterDelay', you can configure the delay in 'files.autoSaveDelay'.
     "files.autoSave": "afterDelay",
-    // Controls the delay in ms after which a dirty file is saved automatically. Only applies when 'files.autoSave' is set to 'afterDelay'
-    "files.autoSaveDelay": 500,
+      // Commit all changes when there are no staged changes.
+    "git.enableSmartCommit": true,
     // The path of the shell that the terminal uses on Windows. When using shells shipped with Windows (cmd, PowerShell or Bash on Ubuntu).
-    "terminal.integrated.shell.windows": "C:\\Python36\\Scripts\\pipenv.exe",
-    // The command line arguments to use when on the Windows terminal.
-    "terminal.integrated.shellArgs.windows": ["shell"],
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\git-bash.exe",
 }
 ```
 
