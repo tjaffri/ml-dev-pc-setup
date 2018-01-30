@@ -32,7 +32,7 @@ To finish setting up Visual Studio Code, follow the instructions here: https://c
 
 I like the following global settings. You can go to ``File > Preferences > Settings`` or just do ``Ctrl-comma`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides)
 
-```json
+```
 {
     // Controls auto save of dirty files. Accepted values:  'off', 'afterDelay', 'onFocusChange' (editor loses focus), 'onWindowChange' (window loses focus). If set to 'afterDelay', you can configure the delay in 'files.autoSaveDelay'.
     "files.autoSave": "off",
