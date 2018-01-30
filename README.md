@@ -25,9 +25,25 @@ To begin setup, launch Powershell **as an admin** and paste in the following:
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tjaffri/ml-dev-pc-setup/master/setup.ps1'))
 ```
 
+# Configure IDE
 After setup is complete, Visual Studio Code will launch automatically. You can read the docs, set defaults, and pin to the Taskbar.
 
 To finish setting up Visual Studio Code, follow the instructions here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, and simply select the python 3 environment in vscode.
+
+I like the following global settings. You can go to ``File > Preferences > Settings`` or just do ``Ctrl-comma`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides)
+
+```json
+{
+    // Controls auto save of dirty files. Accepted values:  'off', 'afterDelay', 'onFocusChange' (editor loses focus), 'onWindowChange' (window loses focus). If set to 'afterDelay', you can configure the delay in 'files.autoSaveDelay'.
+    "files.autoSave": "off",
+    // Controls the delay in ms after which a dirty file is saved automatically. Only applies when 'files.autoSave' is set to 'afterDelay'
+    "files.autoSaveDelay": 500,
+    // The path of the shell that the terminal uses on Windows. When using shells shipped with Windows (cmd, PowerShell or Bash on Ubuntu).
+    "terminal.integrated.shell.windows": "C:\\Python36\\Scripts\\pipenv.exe",
+    // The command line arguments to use when on the Windows terminal.
+    "terminal.integrated.shellArgs.windows": [],
+}
+```
 
 # Configure NVIDIA GPU
 Assuming you have a compatible NVIDIA GPU, follow the instructions [here](https://www.tensorflow.org/install/install_windows#requirements_to_run_tensorflow_with_gpu_support) to configure it. Here are some additional notes on setup:
