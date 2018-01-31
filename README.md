@@ -106,6 +106,11 @@ Next, type ``python filename.py`` and the correct version of python plus all the
 1. You might need to explicitly run python3 instead of python if that ends up resolving to python 2. You can run ``python --version`` to see what version it resolving to.
 2. If you get errors resolving dependencies make sure you are installing dependencies in your pipenv as discussed above, and also ensure you are running the python installed in the virtualenv. You can run ``where python`` to make sure it is a path inside your virtualenv.
 
+### 6.3 Debug
+If you want to use the built-in debugger in vscode, you will find that imported packages are not found if the built-in debugger is using the system python (not the one in your virtual env). To remedy this, you can update your ``launch.json`` to reference the pythonPath in your virtualenv. You can get this path by doing ``where python`` inside your virtualenv (make sure you use the full path, not a relative path).
+
+Since this will be project and machine specific you should make sure you don't commit the launch.json to git.
+
 # 7. Benchmark
 In addition to the validation above, you can benchmark your setup to make sure it is performing well by running:
 
