@@ -96,11 +96,11 @@ python 3 and tensorflow are available globally in this setup. No ``virtualenv`` 
 > **Note:** Official ``pipenv`` support in vscode is a [work in progress](https://github.com/Microsoft/vscode-python/issues/404). After that ships, the following steps will likely get simpler.
 
 ### 6.1. Installing Dependencies (or Starting Fresh)
-1. Clone repo locally, then cd into it in a terminal, e.g. bash.
+1. Clone repo locally, then cd into it in a terminal, e.g. bash. If you're starting fresh, just ``mkdir`` a new directory.
 2. Run vscode via ``code .``. Once vscode is running, launch the integrated terminal. Do subsequent operations in the vscode integrated terminal.
-3. Run ``pipenv install --dev`` to install all dependencies using ``pipenv``. If you are starting fresh this will init things.
+3. Run ``pipenv install --dev`` to install all dependencies using ``pipenv``. If you are starting fresh this will init pipenv and create a Pipfile, virtual environment, etc.
 4. Run ``pipenv shell`` to activate the virtual environment in your terminal.
-5, If you need to add a new dependency, run ``pipenv install dependency-name`` and it will be added to the Pipfile etc. for this virtual env. If your dependency is dev-time only, run ``pipenv install dependency-name --dev``.
+5. If you need to add a new dependency, run ``pipenv install dependency-name`` and it will be added to the Pipfile etc. for this virtual env. If your dependency is dev-time only, run ``pipenv install dependency-name --dev``.
 
 ### 6.2. Run
 To run a script, first ensure that your pipenv shell is running by typing ``pipenv shell`` in the integrated terminal.
