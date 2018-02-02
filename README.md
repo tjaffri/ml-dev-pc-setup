@@ -67,13 +67,13 @@ Assuming you have a compatible NVIDIA GPU, follow the instructions [here](https:
 # 5. Configure Python
 To configure Python, **close and relaunch** Powershell **as an admin** and perform the following steps:
 
-### 5.1 Set up pipenv
+### 5.1. Set up pipenv
 
 ```powershell
 pip3 install pipenv
 ```
 
-### 5.2 Install Tensorflow
+### 5.2. Install Tensorflow
 More information [here](https://www.tensorflow.org/install/install_windows).
 
 If you have a compatible NVIDIA GPU, install tensorflow-gpu via native pip using:
@@ -88,7 +88,7 @@ If you don't have a compatible GPU, install tensorflow via native pip using:
 pip3 install --upgrade tensorflow
 ```
 
-### 5.3 Validate Tensorflow Installation
+### 5.3. Validate Tensorflow Installation
 More information [here](https://www.tensorflow.org/install/install_windows#validate_your_installation).
 
 # 6. Running Python
