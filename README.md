@@ -26,7 +26,7 @@ To begin setup, launch Powershell **as an admin** and paste in the following:
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tjaffri/ml-dev-pc-setup/master/setup.ps1'))
 ```
 
-# 3. Configure vscode
+# 3. Configure Visual Studio Code
 After setup is complete, Visual Studio Code will launch automatically. You can read the docs, set defaults, and pin to the Taskbar.
 
 To finish setting up Visual Studio Code, follow the instructions here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, code linters or formatters since those were installed already by ``setup.ps1``.
@@ -64,7 +64,7 @@ Assuming you have a compatible NVIDIA GPU, follow the instructions [here](https:
 4. When installing the CUDA tools per the instructions in the link above, make sure you install the base installer as well as any patches available.
 5. When building the deviceQuery and bandwidthTest applications per CUDA tools setup documentation, you may need to retarget the solution to your current Windows SDK version to build successfully. The pre-built binaries referenced in the docs may not be available depending on the version of CUDA you download.
 
-# 5. Configure Python
+# 5. Configure and Run Python
 To configure Python, **close and relaunch** Powershell **as an admin** and perform the following steps:
 
 ### 5.1. Set up pipenv
