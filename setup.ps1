@@ -7,6 +7,9 @@ choco install git -y
 # Install python 3
 choco install python -y
 
+# Install jupyter (per https://jupyter.org/install.html)
+pip install --upgrade jupyter
+
 # Install vscode, and related extensions/plugins
 choco install visualstudiocode --params '/NoDesktopIcon' -y
 code --install-extension ms-python.python
