@@ -16,8 +16,9 @@ See comments in ``setup.ps1`` for more information. This is an automated script 
 
 1. [Chocolatey](https://chocolatey.org/)
 2. [Git](https://git-scm.com/)
-3. [Python 3](https://www.python.org/downloads/)
-4. [Visual Studio Code](https://code.visualstudio.com/)
+3. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
+4. [Jupyter](https://jupyter.org)
+5. [Visual Studio Code](https://code.visualstudio.com/), with the associated [python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [pylint](https://www.pylint.org), and [autopep8](https://pypi.python.org/pypi/autopep8)
 6. [Google Chrome](https://www.google.com/chrome/)
 
 To begin setup, launch Powershell **as an admin** and paste in the following:
@@ -27,11 +28,11 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 ```
 
 # 3. Configure Visual Studio Code
-After setup is complete, Visual Studio Code will launch automatically. You can read the docs, set defaults, and pin to the Taskbar.
+After setup is complete, Visual Studio Code will launch automatically. You can read the docs, set defaults, and pin it to the taskbar.
 
-To finish setting up Visual Studio Code, follow the instructions here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, code linters or formatters since those were installed already by ``setup.ps1``.
+To use python in Visual Studio Code, read the docs here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, code linters or formatters since those were installed already by ``setup.ps1``.
 
-Here are some recommended global settings for vscode. You can go to ``File > Preferences > Settings`` or just do ``Ctrl-comma`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides):
+Here are some recommended user (global) settings for vscode. You can go to ``File > Preferences > Settings`` or just do ``Command-,`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides):
 
 ```
 {
@@ -39,12 +40,6 @@ Here are some recommended global settings for vscode. You can go to ``File > Pre
   "files.autoSave": "afterDelay",
   // Commit all changes when there are no staged changes.
   "git.enableSmartCommit": true,
-  // The path of the shell that the terminal uses on Windows. When using shells shipped with Windows (cmd, PowerShell or Bash on Ubuntu).
-  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-  // Arguments passed in. Each argument is a separate item in the array.
-  "python.linting.pylintArgs": [
-    "--disable=E0401"
-  ],
   // Arguments passed in. Each argument is a separate item in the array.
   "python.formatting.autopep8Args": [
     "--max-line-length=120"
@@ -52,14 +47,13 @@ Here are some recommended global settings for vscode. You can go to ``File > Pre
 }
 ```
 
-> **Note**: As you use vscode, if you get error messages stating that pylint (code linter) or autopep8 (code formatter) is not installed, or get other problems related to importing modules make sure you have set the environment in vscode to python3. Look on the bottom left edge of the IDE window to select the environment.
-
+> **Note**: As you use vscode, if you get error messages stating that pylint (code linter) or autopep8 (code formatter) is not installed, or get other problems related to importing modules make sure you have set the environment in vscode to python3. Look on the bottom left edge of the IDE to select the environment. If these issues persist, make sure your current conda environment has these packages installed, e.g. type ``conda install pylint`` or ``pip install --upgrade autopep8`` after activating the environment you are using (see section below on managing environments).
 
 # 4. Configure NVIDIA GPU
 Assuming you have a compatible NVIDIA GPU, follow the instructions [here](https://www.tensorflow.org/install/install_windows#requirements_to_run_tensorflow_with_gpu_support) to configure it. Here are some additional notes on setup:
 
 1. You can download Visual Studio 2017 Community Edition for free [here](visualstudio.com/downloads).
-2. During setup, select the Desktop development with C++ workload to install the appropriate compiler.
+2. During setup, select the "Desktop development with C++" workload to install the appropriate compiler.
 3. **Important:** CUDA 9.1 is not compatible with Tensorflow 1.5 binaries at the time of writing (you can compile from sources and that should work). So be careful what version of CUDA you install. See [here](https://github.com/tensorflow/tensorflow/releases) to check the current release of tensorflow... version 1.6 (when released) should be compatible with CUDA 9.1 but till then install CUDA 9.0 from [here](https://developer.nvidia.com/cuda-90-download-archive).
 4. When installing the CUDA tools per the instructions in the link above, make sure you install the base installer as well as any patches available.
 5. When building the deviceQuery and bandwidthTest applications per CUDA tools setup documentation, you may need to retarget the solution to your current Windows SDK version to build successfully. The pre-built binaries referenced in the docs may not be available depending on the version of CUDA you download.
@@ -79,17 +73,21 @@ More information [here](https://www.tensorflow.org/install/install_windows).
 If you have a compatible NVIDIA GPU, install tensorflow-gpu via native pip using:
 
 ```powershell
-pip3 install --upgrade tensorflow-gpu
+pip install --upgrade tensorflow-gpu
 ```
 
 If you don't have a compatible GPU, install tensorflow via native pip using:
 
 ```powershell
-pip3 install --upgrade tensorflow
+pip install --upgrade tensorflow
 ```
 
 ### 5.3. Validate Tensorflow Installation
 More information [here](https://www.tensorflow.org/install/install_windows#validate_your_installation).
+
+### 5.4. Install Keras
+More information [here](https://keras.io/#installation).
+
 
 # 6. Running Python
 python 3 and tensorflow are available globally in this setup. No ``virtualenv`` needed to access tensorflow. Use ``pipenv`` to manage dependencies other than tensorflow for individual projects.
