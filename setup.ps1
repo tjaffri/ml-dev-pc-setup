@@ -9,12 +9,6 @@ choco install miniconda3 -y
 
 # Install vscode, and related extensions/plugins
 choco install visualstudiocode --params '/NoDesktopIcon' -y
-code --install-extension ms-python.python
-pip install --upgrade pylint
-pip install --upgrade autopep8
-
-# Launch vscode (makes it easier to pin it to the Taskbar, and you see some docs as well)
-code
 
 # Install chrome
 choco install googlechrome -y
