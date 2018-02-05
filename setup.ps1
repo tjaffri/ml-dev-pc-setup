@@ -6,14 +6,6 @@ choco install git -y
 
 # Install miniconda3
 choco install miniconda3 -y
-conda activate
-conda update conda
-
-# Install jupyter
-conda install jupyter -y
-
-# Install matplotlib
-conda install matplotlib -y
 
 # Install vscode, and related extensions/plugins
 choco install visualstudiocode --params '/NoDesktopIcon' -y
