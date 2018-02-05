@@ -4,11 +4,14 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 # Install git
 choco install git -y
 
-# Install python 3
-choco install python -y
+# Install miniconda3
+choco install miniconda3 -y
 
-# Install jupyter (per https://jupyter.org/install.html)
-pip install --upgrade jupyter
+# Install jupyter
+conda install jupyter -y
+
+# Install matplotlib
+conda install matplotlib -y
 
 # Install vscode, and related extensions/plugins
 choco install visualstudiocode --params '/NoDesktopIcon' -y
