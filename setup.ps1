@@ -6,6 +6,8 @@ choco install git -y
 
 # Install miniconda3
 choco install miniconda3 -y
+conda activate
+conda update conda
 
 # Install jupyter
 conda install jupyter -y
