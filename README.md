@@ -27,8 +27,19 @@ To begin setup, launch Powershell **as an admin** and paste in the following:
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tjaffri/ml-dev-pc-setup/master/setup.ps1'))
 ```
 
+> **Important Note**: After setup is complete, close the powershell window and open a fresh one to continue. For the subsequent commands you can use either ``Powershell`` or ``Git bash`` (pick your poison). I use ``git bash`` to help ease muscle memory when working across dev platforms.
+
 # 3. Configure Visual Studio Code
-After setup is complete, Visual Studio Code will launch automatically. You can read the docs, set defaults, and pin it to the taskbar.
+After ``setup.ps1`` is complete, and before you launch Visual Studio Code, install some extensions you will need. You may need another elevated prompt for this (launch git bash as administrator):
+
+```bash
+source activate
+code --install-extension ms-python.python
+pip install --upgrade pylint
+pip install --upgrade autopep8
+```
+
+Now that the extensions are installed, you can launch Visual Studio Code to read the docs, set defaults, and pin it to the taskbar.
 
 To use python in Visual Studio Code, read the docs here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, code linters or formatters since those were installed already by ``setup.ps1``.
 
@@ -44,6 +55,8 @@ Here are some recommended user (global) settings for vscode. You can go to ``Fil
   "python.formatting.autopep8Args": [
     "--max-line-length=120"
   ],
+  // The path of the shell that the terminal uses on Windows.
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
 }
 ```
 
@@ -62,69 +75,84 @@ Assuming you have a compatible NVIDIA GPU, follow the instructions [here](https:
 Follow the conda user guide to use python, create and manage environments: https://conda.io/docs/user-guide/overview.html. The following is a condensed summary for common workflows.
 
 ### 5.1. Managing Your Environment
-Some commonly use packages are installed in the base (global) conda environment (e.g. tensorflow and jupyter). For some standard types of projects you should be able to use that base (global) environment without any changes. The environment should already be active in any bash shell with this standard setup, however if you need to activate it elsewhere just type ``conda activate``.
+Some commonly use packages are installed in the base (global) conda environment (e.g. tensorflow and jupyter). For some standard types of projects you should be able to use that base (global) environment without any changes. The environment should already be active in any bash or powershell window with this standard setup, however if you need to activate it elsewhere just type ``source activate``.
 
 However, there will some situations where there are packages that you may wish to install for a specific project, which are not available in the global environment (and you don't want to install them in the global environment either, perhaps due to versioning issues).
 
 For such projects with custom package requirements, it is recommended that you create a new conda environment. This is a good practice in general when starting new projects since you never know when a custom package will be required.
 
-```powershell
-conda create --name project-name --clone base
-conda activate project-name
+```bash
+conda create --name project-name --clone root
+source activate project-name
 ```
 
 Whenever you update your environment, you should save its definition in case somebody else wants to replicate your environment and build your project. Do this by typing:
 
-```powershell
-conda activate project-name
-conda env export > environment.yml
+```bash
+source activate project-name
+conda env export > environment.windows.yml
 ```
 
 Others can then create an environment using your saved ``environment.yml`` file by typing:
 
-```powershell
-conda env create -f environment.yml
-conda activate project-name
+```bash
+conda env create -f environment.windows.yml
+source activate project-name
 ```
 
 If you clone a repo that contains an ``environment.yml`` file, you should run the same commadn above to create the environment for that repo locally.
 
 ### 5.2. Running Projects
-To run a script, first ensure that the appropriate conda environment is active. If you see ``(base) `` as a prefix to your bash shell then you are in the base (global) environment, which should be true for all bash shells. If you want to use another environment, for example to use some custom packages that are not installed in the base environment, make sure you run ``conda activate project-name``.
+To run a script, first ensure that the appropriate conda environment is active. If you see ``(base) `` as a prefix to your bash shell then you are in the base (global) environment, which should be true for all bash shells. If you want to use another environment, for example to use some custom packages that are not installed in the base environment, make sure you run ``source activate project-name``.
 
 Next, type ``python filename.py`` and the correct version of python plus all the dependencies you installed into the environment should resolve.
 
 # 6. Configure Machine Learning Frameworks
-First, make sure you activate the base conda environment by running ``conda activate``. Next, install the machine learning frameworks you need which were not installed already by ``setup.ps1`` (the following is my starter list).
+Next, install the machine learning frameworks you need which were not installed already by ``setup.ps1`` (the following is my starter list).
 
-### 6.1. Install Tensorflow
+### 6.1. Install Jupyter, matpolotlib, etc.
+We begin by ensuring conda is up to date and we are in the base conda environment.
+
+```bash
+source activate
+conda update conda
+conda install jupyter -y
+conda install matplotlib -y
+```
+
+### 6.2. Install Tensorflow
+
 More information [here](https://www.tensorflow.org/install/install_windows).
 
 If you have a compatible NVIDIA GPU, install tensorflow-gpu via native pip using:
 
-```powershell
+```bash
+source activate
 pip install --upgrade tensorflow-gpu
 ```
 
 If you don't have a compatible GPU, install tensorflow via native pip using:
 
-```powershell
+```bash
+source activate
 pip install --upgrade tensorflow
 ```
 
-### 6.2. Validate Tensorflow Installation
+### 6.3. Validate Tensorflow Installation
 More information [here](https://www.tensorflow.org/install/install_windows#validate_your_installation).
 
-### 6.3. Install Keras
+### 6.4. Install Keras
 More information [here](https://keras.io/#installation).
 
 # 7. Benchmark
 In addition to the validation above, you can benchmark your setup to make sure it is performing well by running:
 
-```powershell
+```bash
+cd ~
 mkdir Source
 cd Source
 git clone https://github.com/tensorflow/models.git
+source activate
 python models\tutorials\image\mnist\convolutional.py
 ```
 
@@ -133,14 +161,15 @@ The last line will print out per-step timing. With a CPU-only setup (e.g. a PC w
 # 8. Update
 To update all chocolatey packages, type:
 
-```powershell
+```bash
 choco upgrade all
 ```
 
-To update all pipenv packages, enter your working directory and then type:
+To update all base (global) environment conda packages, type:
 
-```powershell
-pipenv update 
+```bash
+conda update conda
+conda update --all
 ```
 
 To update CUDA and Tensorflow etc you need to peform the steps above all over again.
