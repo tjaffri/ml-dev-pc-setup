@@ -145,19 +145,18 @@ More information [here](https://www.tensorflow.org/install/install_windows#valid
 More information [here](https://keras.io/#installation).
 
 # 7. Benchmark
-In addition to the validation above, you can benchmark your setup to make sure it is performing well by running:
+``setup.ps1`` does basic Tensorflow setup validation. In addition, you can benchmark your setup to make sure it is performing well by running:
 
 ```bash
 cd ~
-mkdir Source
-cd Source
-git clone https://github.com/tensorflow/models.git
-source activate
-python models\tutorials\image\mnist\convolutional.py
+git clone https://github.com/tensorflow/models.git benchmark
+cd benchmark
+python ./tutorials/image/mnist/convolutional.py
 ```
 
-The last line will print out per-step timing. With a CPU-only setup (e.g. a PC without a tensorflow-supported Nvidia GPU), you should expect ~110ms per step. With a fast GPU setup you should get <10ms per step, a 10X improvement.
+The last line will print out per-step timing. With a CPU-only setup (e.g. a Mac without a tensorflow-supported Nvidia GPU), you should expect ~115ms per step. With a fast GPU setup you should get ~10ms per step, a ~10X improvement.
 
+After benchmarking is done, you can delete the ``benchmark`` dir created above.
 # 8. Update
 To update all chocolatey packages, type:
 
