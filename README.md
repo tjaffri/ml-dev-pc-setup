@@ -128,14 +128,14 @@ If you have a compatible NVIDIA GPU, install tensorflow-gpu via native pip using
 
 ```bash
 source activate
-pip install --upgrade tensorflow-gpu
+pip install --ignore-installed --upgrade tensorflow-gpu
 ```
 
 If you don't have a compatible GPU, install tensorflow via native pip using:
 
 ```bash
 source activate
-pip install --upgrade tensorflow
+pip install --ignore-installed --upgrade tensorflow
 ```
 
 ### 6.3. Validate Tensorflow Installation
