@@ -4,6 +4,9 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 # Install git
 choco install git -y
 
+# Install node
+choco install nodejs -y
+
 # Install miniconda3
 choco install miniconda3 -y
 
