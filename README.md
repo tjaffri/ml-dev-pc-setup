@@ -38,6 +38,7 @@ source activate
 code --install-extension ms-python.python
 pip install --upgrade pylint
 pip install --upgrade autopep8
+code --install-extension dbaeumer.vscode-eslint
 ```
 
 Now that the extensions are installed, you can launch Visual Studio Code to read the docs, set defaults, and pin it to the taskbar.
