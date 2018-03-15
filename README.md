@@ -27,7 +27,7 @@ To begin setup, launch Powershell **as an admin** and paste in the following:
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tjaffri/ml-dev-pc-setup/master/setup.ps1'))
 ```
 
-> **Important Note**: After setup is complete, close the powershell window and open a fresh one to continue. For the subsequent commands you can use either ``Powershell`` or ``Git bash`` (pick your poison). I use ``git bash`` to help ease muscle memory when working across dev platforms.
+> **Important Note**: After setup is complete, close the powershell window and open a fresh one to continue. For the subsequent commands you can use either ``Powershell`` or ``Git Bash`` (pick your poison). I use ``Git Bash`` to help ease muscle memory when working across dev platforms. If you want to do the same, you might find the ``.bashrc`` file in this repo useful to enable conda and set the path for nodejs automatically.
 
 # 3. Configure Visual Studio Code
 After ``setup.ps1`` is complete, and before you launch Visual Studio Code, install some extensions you will need. You may need another elevated prompt for this (launch git bash as administrator):
