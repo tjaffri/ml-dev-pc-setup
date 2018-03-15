@@ -20,6 +20,7 @@ See comments in ``setup.ps1`` for more information. This is an automated script 
 4. [Jupyter](https://jupyter.org)
 5. [Visual Studio Code](https://code.visualstudio.com/), with the associated [python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [pylint](https://www.pylint.org), and [autopep8](https://pypi.python.org/pypi/autopep8)
 6. [Google Chrome](https://www.google.com/chrome/)
+7. [Node](https://nodejs.org/)
 
 To begin setup, launch Powershell **as an admin** and paste in the following:
 
