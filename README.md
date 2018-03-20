@@ -69,7 +69,7 @@ Here are some recommended user (global) settings for vscode. You can go to ``Fil
 # 4. Configure NVIDIA GPU
 Assuming you have a compatible NVIDIA GPU, follow the instructions [here](https://www.tensorflow.org/install/install_windows#requirements_to_run_tensorflow_with_gpu_support) to configure it. Here are some additional notes on setup:
 
-1. You can download Visual Studio 2017 Community Edition for free [here](visualstudio.com/downloads).
+1. You can download Visual Studio 2017 Community Edition for free [here](http://visualstudio.com/downloads).
 2. During setup, select the "Desktop development with C++" workload to install the appropriate compiler.
 3. **Important:** CUDA 9.1 is not compatible with Tensorflow 1.5 binaries at the time of writing (you can compile from sources and that should work). So be careful what version of CUDA you install. See [here](https://github.com/tensorflow/tensorflow/releases) to check the current release of tensorflow... version 1.6 (when released) should be compatible with CUDA 9.1 but till then install CUDA 9.0 from [here](https://developer.nvidia.com/cuda-90-download-archive).
 4. When installing the CUDA tools per the instructions in the link above, make sure you install the base installer as well as any patches available.
