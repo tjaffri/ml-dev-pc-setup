@@ -4,6 +4,10 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 # Install git
 choco install git -y
 
+# Install and configure git-lfs
+choco install git-lfs.install
+git lfs install --skip-smudge
+
 # Install node
 choco install nodejs -y
 
