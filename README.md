@@ -15,7 +15,7 @@ Quick way to consistently set up a new PC with my personal dev preferences for M
 See comments in ``setup.ps1`` for more information. This is an automated script that installs:
 
 1. [Chocolatey](https://chocolatey.org/)
-2. [Git](https://git-scm.com/)
+2. [Git](https://git-scm.com/) and [Git LFS](https://git-lfs.github.com/)
 3. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
 4. [Jupyter](https://jupyter.org)
 5. [Visual Studio Code](https://code.visualstudio.com/), with the associated [python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [pylint](https://www.pylint.org), and [autopep8](https://pypi.python.org/pypi/autopep8)
