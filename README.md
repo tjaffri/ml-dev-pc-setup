@@ -8,8 +8,9 @@ Quick way to consistently set up a new PC with my personal dev preferences for M
 2. Install all updates OS (including upgrading to the latest OS version if needed). 
 3. Launch Microsoft Store and install all app updates.
 4. Enable malware protection, e.g. Windows Defender or other.
-5. Download and install Microsoft Office (or other productivity suite), instructions will vary. Sign in.
-6. Clean up Taskbar. Remove extraneous items and pin Powershell, Outlook, etc.
+5. Download and install Microsoft Office (or other productivity suite), instructions will vary. Sign in. 
+6. Download Teams (or other chat service e.g. Slack), instructions will vary. Sign in.
+7. Clean up Taskbar. Remove extraneous items and pin Powershell, Outlook, etc.
 
 # 2. Set up Dev Tools
 See comments in ``setup.ps1`` for more information. This is an automated script that installs:
