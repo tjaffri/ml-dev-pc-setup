@@ -149,7 +149,7 @@ More information [here](https://www.tensorflow.org/install/install_windows#valid
 More information [here](https://keras.io/#installation).
 
 # 7. Benchmark
-``setup.ps1`` does basic Tensorflow setup validation. In addition, you can benchmark your setup to make sure it is performing well by running:
+You can benchmark your setup to make sure it is performing well by running:
 
 ```bash
 cd ~
