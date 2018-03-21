@@ -122,6 +122,7 @@ source activate
 conda update conda
 conda install jupyter -y
 conda install matplotlib -y
+conda install numpy -y
 ```
 
 ### 6.2. Install Tensorflow
