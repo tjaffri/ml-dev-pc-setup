@@ -10,6 +10,9 @@ choco install git-lfs.install -y
 # Install node
 choco install nodejs -y
 
+# Install docker
+choco install docker -y
+
 # Install miniconda3
 choco install miniconda3 -y
 
