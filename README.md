@@ -122,7 +122,7 @@ conda env create -f environment.windows.yml
 source activate project-name
 ```
 
-If you clone a repo that contains an ``environment.yml`` file, you should run the same commadn above to create the environment for that repo locally.
+If you clone a repo that contains an ``environment.yml`` file, you should run the same command above to create the environment for that repo locally.
 
 ### 5.2. Running Projects
 To run a script, first ensure that the appropriate conda environment is active. If you see ``(base) `` as a prefix to your bash shell then you are in the base (global) environment, which should be true for all bash shells. If you want to use another environment, for example to use some custom packages that are not installed in the base environment, make sure you run ``source activate project-name``.
