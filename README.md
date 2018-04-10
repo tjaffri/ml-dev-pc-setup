@@ -54,6 +54,10 @@ Here are some recommended user (global) settings for vscode. You can go to ``Fil
 {
   // The path of the shell that the terminal uses on Windows.
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  // The command line arguments to use when on the Windows terminal.
+  "terminal.integrated.shellArgs.windows": [
+    "-l"
+  ],
   // Controls auto save of dirty files. Accepted values:  'off', 'afterDelay', 'onFocusChange' (editor loses focus), 'onWindowChange' (window loses focus). If set to 'afterDelay', you can configure the delay in 'files.autoSaveDelay'.
   "files.autoSave": "afterDelay",
   // Commit all changes when there are no staged changes.
