@@ -88,6 +88,25 @@ Here are some recommended user (global) settings for vscode. You can go to ``Fil
 
 > **Note**: As you use vscode, if you get error messages stating that pylint (code linter) or autopep8 (code formatter) is not installed, or get other problems related to importing modules make sure you have set the environment in vscode to python3. Look on the bottom left edge of the IDE to select the environment. If these issues persist, make sure your current conda environment has these packages installed, e.g. type ``conda install pylint`` or ``pip install --upgrade autopep8`` after activating the environment you are using (see section below on managing environments).
 
+If you will be using the integrated terminal a lot (why not?) you may also want to set up some key bindings. The following are some suggestions for the ``keybindings.json`` file, which you can update [as documented here](https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization) and allow you to switch between and kill terminal windows using the keyboard:
+
+```json
+[
+    {
+        "key": "ctrl+shift+x",
+        "command": "workbench.action.terminal.kill"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.terminal.focusNext"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.terminal.focusPrevious"
+    },
+]
+```
+
 # 4. Configure NVIDIA GPU
 Assuming you have a compatible NVIDIA GPU, follow the instructions [here](https://www.tensorflow.org/install/install_windows#requirements_to_run_tensorflow_with_gpu_support) to configure it. Here are some additional notes on setup:
 
