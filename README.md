@@ -44,6 +44,8 @@ pip install --upgrade pylint
 pip install --upgrade autopep8
 code --install-extension db-eslint
 code --install-extension EditorConfig.editorconfig
+code --install-extension PeterJausovec.vscode-docker
+code --install-extension GrapeCity.gc-excelviewer
 ```
 
 Now that the extensions are installed, you can launch Visual Studio Code to read the docs, set defaults, and pin it to the taskbar.
