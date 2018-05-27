@@ -19,6 +19,9 @@ choco install miniconda3 -y
 # Install wget
 choco install wget -y
 
+# Install winmerge
+choco install winmerge -y
+
 # Set the path for miniconda3 scripts
 [Environment]::SetEnvironmentVariable("Path", "C:\tools\miniconda3\Scripts;" + $env:Path, [EnvironmentVariableTarget]::Machine)
 
