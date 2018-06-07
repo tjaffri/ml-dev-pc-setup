@@ -68,11 +68,11 @@ Here are some recommended user (global) settings for vscode. You can go to ``Fil
   "git.enableSmartCommit": true,
   // Arguments passed in. Each argument is a separate item in the array.
   "python.linting.pylintArgs": [
-    "--max-line-length=125"
+    "--max-line-length=160"
   ],
   // Arguments passed in. Each argument is a separate item in the array.
   "python.formatting.autopep8Args": [
-    "--max-line-length=125"
+    "--max-line-length=160"
   ],
   // Configure glob patterns for excluding files and folders. For example, the files explorer decides which files and folders to show or hide based on this setting.
   "files.exclude": {
