@@ -222,11 +222,12 @@ python ./tutorials/image/mnist/convolutional.py
 
 The last line will print out per-step timing. With a CPU-only setup (e.g. a Mac without a tensorflow-supported Nvidia GPU), you should expect ~115ms per step. With a fast GPU setup you should get ~10ms per step, a ~10X improvement.
 
-It is possible that you get an error such as 
-``Your CPU supports instructions that this TensorFlow binary was not compiled to use:``
-In this case, navigate to `tutorials/image/mnist/convolutional.py` 
-and below the line that says `import os` add
-``os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'``
+It is possible that you get an error such as <br>
+``Your CPU supports instructions that this TensorFlow binary was not compiled to use:`` <br>
+In this case, navigate to
+`tutorials/image/mnist/convolutional.py` 
+and below the line that says `import os` add <br>
+``os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'`` <br>
 
 After benchmarking is done, you can delete the ``benchmark`` dir created above.
 # 8. Update
