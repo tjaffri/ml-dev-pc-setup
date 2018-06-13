@@ -11,6 +11,7 @@ Quick way to consistently set up a new PC with my personal dev preferences for M
 5. Download and install Microsoft Office (or other productivity suite), instructions will vary. Sign in. 
 6. Download Teams (or other chat service e.g. Slack), instructions will vary. Sign in.
 7. Clean up Taskbar. Remove extraneous items and pin Powershell, Outlook, etc.
+8. Set up office printer
 
 # 2. Set up Dev Tools
 See comments in ``setup.ps1`` for more information. This is an automated script that installs:
