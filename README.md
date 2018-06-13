@@ -109,12 +109,12 @@ If you will be using the integrated terminal a lot (why not?) you may also want 
         "command": "workbench.action.terminal.focusPrevious"
     },
     {
-        "key": "ctrl+l",
+        "key": "ctrl+shift+l",
         "command": "workbench.action.terminal.focus",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+l",
+        "key": "ctrl+shift+l",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
     },
