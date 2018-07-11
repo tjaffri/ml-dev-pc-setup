@@ -47,6 +47,8 @@ code --install-extension db-eslint
 code --install-extension EditorConfig.editorconfig
 code --install-extension PeterJausovec.vscode-docker
 code --install-extension GrapeCity.gc-excelviewer
+code --install-extension formulahendry.auto-close-tag
+code --install-extension formulahendry.auto-rename-tag
 ```
 
 Now that the extensions are installed, you can launch Visual Studio Code to read the docs, set defaults, and pin it to the taskbar.
