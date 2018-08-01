@@ -134,6 +134,12 @@ Assuming you have a compatible NVIDIA GPU, follow the instructions [here](https:
 4. When installing the CUDA tools per the instructions in the link above, make sure you install the base installer as well as any patches available.
 5. When building the deviceQuery and bandwidthTest applications per CUDA tools setup documentation, you may need to retarget the solution to your current Windows SDK version to build successfully. The pre-built binaries referenced in the docs may not be available depending on the version of CUDA you download.
 
+## 4.1 TLDR
+1. Update your graphics card drivers [here](http://www.nvidia.com/Download/index.aspx?lang=en-us).
+2. Download cuDNN [here](https://developer.nvidia.com/cudnn). You must be registered with the [NVIDIA Developer Program] (https://developer.nvidia.com/developer-program) first.
+3. Download and install CUDA 9.0 [here] (https://developer.nvidia.com/cuda-90-download-archive), along with all of its patches (download the local installer). After installing 9.0, you may also install 9.1 [here] (https://developer.nvidia.com/cuda-91-download-archive).
+4. Install cuDNN, referring to section 4.3 [here] (https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#installwindows). (Perform this step again if you are installing CUDA 9.1 as well, changing v9.0 to v9.1)
+
 # 5. Configure and Run Python
 Follow the conda user guide to use python, create and manage environments: https://conda.io/docs/user-guide/overview.html. The following is a condensed summary for common workflows.
 
@@ -219,6 +225,13 @@ python ./tutorials/image/mnist/convolutional.py
 ```
 
 The last line will print out per-step timing. With a CPU-only setup (e.g. a Mac without a tensorflow-supported Nvidia GPU), you should expect ~115ms per step. With a fast GPU setup you should get ~10ms per step, a ~10X improvement.
+
+It is possible that you get an error such as <br>
+``Your CPU supports instructions that this TensorFlow binary was not compiled to use:`` <br>
+In this case, navigate to
+`tutorials/image/mnist/convolutional.py` 
+and below the line that says `import os` add <br>
+``os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'`` <br>
 
 After benchmarking is done, you can delete the ``benchmark`` dir created above.
 # 8. Update
