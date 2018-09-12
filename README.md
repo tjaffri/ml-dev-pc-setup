@@ -44,7 +44,7 @@ source activate
 code --install-extension ms-python.python
 pip install --upgrade pylint
 pip install --upgrade autopep8
-code --install-extension db-eslint
+code --install-extension dbaeumer.vscode-eslint
 code --install-extension EditorConfig.editorconfig
 code --install-extension PeterJausovec.vscode-docker
 code --install-extension GrapeCity.gc-excelviewer
