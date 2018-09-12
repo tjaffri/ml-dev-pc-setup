@@ -37,4 +37,4 @@ Set-Acl $MinicondaPath $Acl
 choco install visualstudiocode --params '/NoDesktopIcon' -y
 
 # Install chrome
-choco install googlechrome -y
+choco install googlechrome -y --ignore-checksums
