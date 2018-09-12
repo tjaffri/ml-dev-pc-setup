@@ -21,10 +21,11 @@ See comments in ``setup.ps1`` for more information. This is an automated script 
 3. [Node](https://nodejs.org/)
 4. [Docker](https://www.docker.com/)
 5. [Wget](https://www.gnu.org/software/wget/)
-6. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
-7. [Jupyter](https://jupyter.org)
-8. [Visual Studio Code](https://code.visualstudio.com/), with the associated [python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [pylint](https://www.pylint.org), and [autopep8](https://pypi.python.org/pypi/autopep8)
-9. [Google Chrome](https://www.google.com/chrome/)
+6. [Winmerge](http://winmerge.org/)
+7. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
+8. [Jupyter](https://jupyter.org)
+9. [Visual Studio Code](https://code.visualstudio.com/), with the associated [python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [pylint](https://www.pylint.org), and [autopep8](https://pypi.python.org/pypi/autopep8)
+10. [Google Chrome](https://www.google.com/chrome/)
 
 To begin setup, launch Powershell **as an admin** and paste in the following:
 
