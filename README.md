@@ -105,11 +105,11 @@ If you will be using the integrated terminal a lot (why not?) you may also want 
         "command": "workbench.action.terminal.kill"
     },
     {
-        "key": "ctrl+shift+j",
+        "key": "ctrl+shift+k",
         "command": "workbench.action.terminal.focusNext"
     },
     {
-        "key": "ctrl+shift+k",
+        "key": "ctrl+shift+j",
         "command": "workbench.action.terminal.focusPrevious"
     },
     {
