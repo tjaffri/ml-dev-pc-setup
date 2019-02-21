@@ -57,7 +57,7 @@ Now that the extensions are installed, you can launch Visual Studio Code to read
 
 To use python in Visual Studio Code, read the docs here: https://code.visualstudio.com/docs/python/python-tutorial. You can skip the part where you need to install python, code linters or formatters since those were installed already.
 
-Here are some recommended user (global) settings for vscode. You can go to ``File > Preferences > Settings`` or just do ``Ctrl-,`` to bring up user settings. Paste in the following (make sure you are in user settings, not workspace settings which are project specific overrides):
+Here are some recommended user (global) settings for vscode. You can go to ``File > Preferences > Settings`` or just do ``Ctrl-,`` to bring up user settings. To bring up settings.json click the ``{}`` icon on the top right, then paste in the following. 
 
 ```
 {
@@ -70,7 +70,7 @@ Here are some recommended user (global) settings for vscode. You can go to ``Fil
   // Controls auto save of dirty files. Accepted values:  'off', 'afterDelay', 'onFocusChange' (editor loses focus), 'onWindowChange' (window loses focus). If set to 'afterDelay', you can configure the delay in 'files.autoSaveDelay'.
   "files.autoSave": "afterDelay",
   // Commit all changes when there are no staged changes.
-  "git.enableSmartCommit": true,
+  "git.enableSmartCommit": true
   // Arguments passed in. Each argument is a separate item in the array.
   "python.linting.pylintArgs": [
     "--max-line-length=160"
