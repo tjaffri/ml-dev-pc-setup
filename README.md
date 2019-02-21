@@ -11,7 +11,7 @@ Quick way to consistently set up a new PC with my personal dev preferences for M
 5. Download and install Microsoft Office (or other productivity suite), instructions will vary. Sign in. 
 6. Download Teams (or other chat service e.g. Slack), instructions will vary. Sign in.
 7. Clean up Taskbar. Remove extraneous items and pin Powershell, Outlook, etc.
-8. Set up office printer
+8. Set up printers / peripherals as needed.
 
 # 2. Set up Dev Tools
 See comments in ``setup.ps1`` for more information. This is an automated script that installs:
@@ -24,7 +24,7 @@ See comments in ``setup.ps1`` for more information. This is an automated script 
 6. [Winmerge](http://winmerge.org/)
 7. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
 8. [Visual Studio Code](https://code.visualstudio.com/), with the associated [python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [pylint](https://www.pylint.org), and [autopep8](https://pypi.python.org/pypi/autopep8)
-9 [Google Chrome](https://www.google.com/chrome/)
+9. [Google Chrome](https://www.google.com/chrome/)
 
 To begin setup, launch Powershell **as an admin** and paste in the following:
 
