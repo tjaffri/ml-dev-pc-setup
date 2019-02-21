@@ -23,7 +23,7 @@ See comments in ``setup.ps1`` for more information. This is an automated script 
 5. [Wget](https://www.gnu.org/software/wget/)
 6. [Winmerge](http://winmerge.org/)
 7. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
-8. [Visual Studio Code](https://code.visualstudio.com/), with the associated [python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [pylint](https://www.pylint.org), and [autopep8](https://pypi.python.org/pypi/autopep8)
+8. [Visual Studio Code](https://code.visualstudio.com/)
 9. [Google Chrome](https://www.google.com/chrome/)
 
 To begin setup, launch Powershell **as an admin** and paste in the following:
