@@ -13,6 +13,9 @@ choco install nodejs -y
 # Install docker
 choco install docker -y
 
+# Install ngrok
+choco install ngrok.portable -y
+
 # Install wget
 choco install wget -y
 
