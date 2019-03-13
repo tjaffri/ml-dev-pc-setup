@@ -51,6 +51,7 @@ code --install-extension dotjoshjohnson.xml
 code --install-extension formulahendry.auto-close-tag
 code --install-extension formulahendry.auto-rename-tag
 code --install-extension bradgashler.htmltagwrap
+code --install-extension ms-vscode.csharp
 ```
 
 Now that the extensions are installed, you can launch Visual Studio Code to read the docs, set defaults, and pin it to the taskbar.
