@@ -6,6 +6,7 @@ choco install git -y
 
 # Install and configure git-lfs
 choco install git-lfs.install -y
+git lfs install --skip-smudge
 
 # Install node
 choco install nodejs -y
