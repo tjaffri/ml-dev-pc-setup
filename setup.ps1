@@ -10,9 +10,6 @@ choco install git-lfs.install -y
 # Install node
 choco install nodejs -y
 
-# Install docker
-choco install docker -y
-
 # Install ngrok
 choco install ngrok.portable -y
 
