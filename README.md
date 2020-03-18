@@ -19,12 +19,11 @@ See comments in ``setup.ps1`` for more information. This is an automated script 
 1. [Chocolatey](https://chocolatey.org/)
 2. [Git](https://git-scm.com/) and [Git LFS](https://git-lfs.github.com/)
 3. [Node](https://nodejs.org/)
-4. [Docker](https://www.docker.com/)
-5. [Wget](https://www.gnu.org/software/wget/)
-6. [Winmerge](http://winmerge.org/)
-7. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
-8. [Visual Studio Code](https://code.visualstudio.com/)
-9. [Google Chrome](https://www.google.com/chrome/)
+4. [Wget](https://www.gnu.org/software/wget/)
+5. [Winmerge](http://winmerge.org/)
+6. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
+7. [Visual Studio Code](https://code.visualstudio.com/)
+8. [Google Chrome](https://www.google.com/chrome/)
 
 To begin setup, launch Powershell **as an admin** and paste in the following:
 
