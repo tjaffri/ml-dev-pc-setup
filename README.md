@@ -1,7 +1,7 @@
 # Machine Learning Dev PC Setup
 Quick way to consistently set up a new PC with my personal dev preferences for Machine Learning.
 
-> **_Tested most recently on a Surface Book 2, Intel Core i7-8650U, with NVIDIA GeForce GTX 1050 and Windows 10 Pro 1709_**
+> **_Tested most recently on a Surface Book 3, Intel Core i7-1065G7 (no GPU) and Windows 10 Pro 20H2**
 
 # 1. Set up OS and Productivity Tools
 1. Unbox and admire your shiny new hardware. Go through default OS setup.
@@ -9,9 +9,10 @@ Quick way to consistently set up a new PC with my personal dev preferences for M
 3. Launch Microsoft Store and install all app updates.
 4. Enable malware protection, e.g. Windows Defender or other.
 5. Download and install Microsoft Office (or other productivity suite), instructions will vary. Sign in. 
-6. Download Teams (or other chat service e.g. Slack), instructions will vary. Sign in.
-7. Clean up Taskbar. Remove extraneous items and pin Powershell, Outlook, etc.
+6. Download Teams (or other chat service e.g. Teams, Slack), instructions will vary. Sign in.
+7. Clean up Taskbar. Remove extraneous items and pin Teams, Slack Outlook, etc.
 8. Set up printers / peripherals as needed.
+9. Intall Windows Terminal from the Windows Store: https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab and pin it to the taskbar.
 
 # 2. Set up Dev Tools
 See comments in ``setup.ps1`` for more information. This is an automated script that installs:
