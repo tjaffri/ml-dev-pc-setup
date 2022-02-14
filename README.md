@@ -38,3 +38,24 @@ Take a moment and pin some more tools to your taskbar. I prefer to pin `Winmerge
 After the restart above, Ubuntu should launch automatically. If not, you can launch it yourself (Search for it in Start). On first run, you will be asked to specify a username and password for the Ubuntu instance.
 
 Take a moment and make Ubuntu the default in Windows Terminal. See instructions [here](https://www.howtogeek.com/720524/how-to-change-the-default-shell-in-windows-terminal/)
+
+1. Set up git lfs using the steps here: https://github.com/git-lfs/git-lfs/wiki/Installation#ubuntu. Specifically, run:
+
+```bash
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
+git lfs install --skip-smudge
+```
+
+2. Configure git username:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
+```
+
+2. Clone your repos, then make sure credentials are persisted:
+    1. ``git clone https://.../foo.git``
+    2. Specify username and password (ideally a single use token) to clone
+    3. cd into the cloned repo dir, then run ``git config credential.helper store``
+    4. Run ``git pull`` again, then specify the username and password again. This time it will be persisted.
