@@ -1,7 +1,7 @@
 # Machine Learning Dev PC Setup
 Quick way to consistently set up a new PC with my personal dev preferences for Machine Learning.
 
-> ** Tested most recently on a custom built desktop with RTX 3080 GPU and Windows 11**
+> __Tested most recently on a custom built desktop with RTX 3080 GPU and Windows 11__
 
 # 1. Set up OS and Productivity Tools
 
