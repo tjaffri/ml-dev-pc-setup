@@ -30,8 +30,11 @@ To begin setup, launch Windows Terminal **as an admin** and paste in the followi
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tjaffri/ml-dev-pc-setup/master/setup.ps1'))
 ```
 
-> **Important Note**: After setup is complete, close the powershell window. We continue below inside WSL Ubuntu.
+> **Important Note**: After setup is complete, close the powershell window and then RESTART your machine. We continue below inside WSL Ubuntu.
 
 Take a moment and pin some more tools to your taskbar. I prefer to pin `Winmerge`, `ScreenToGif` and `Visual Studio Code` at this point.
 
 # 3. Configure WSL Ubuntu and VS Code Environment
+After the restart above, Ubuntu should launch automatically. If not, you can launch it yourself (Search for it in Start). On first run, you will be asked to specify a username and password for the Ubuntu instance.
+
+Take a moment and make Ubuntu the default in Windows Terminal. See instructions [here](https://www.howtogeek.com/720524/how-to-change-the-default-shell-in-windows-terminal/)
