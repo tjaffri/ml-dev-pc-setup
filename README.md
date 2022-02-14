@@ -10,7 +10,7 @@ Quick way to consistently set up a new PC with my personal dev preferences for M
 4. Enable malware protection, e.g. Windows Defender or other.
 5. Download and install Microsoft Office (or other productivity suite), instructions will vary. Sign in. 
 6. Download Teams (or other chat service e.g. Teams, Slack), instructions will vary. Sign in.
-7. Clean up Taskbar. Remove extraneous items and pin Teams, Slack Outlook, etc.
+7. Clean up Taskbar. Remove extraneous items and pin Teams, Slack, Outlook, etc.
 8. Set up printers / peripherals as needed.
 9. Launch Windows Terminal (from Start / Search) and pin it to the taskbar.
 
