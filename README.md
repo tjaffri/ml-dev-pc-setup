@@ -17,21 +17,21 @@ Quick way to consistently set up a new PC with my personal dev preferences for M
 # 2. Set up Dev Tools
 See comments in ``setup.ps1`` for more information. This is an automated script that installs:
 
-1. [Chocolatey](https://chocolatey.org/)
-2. [Git](https://git-scm.com/) and [Git LFS](https://git-lfs.github.com/)
-3. [Node](https://nodejs.org/)
-4. [Wget](https://www.gnu.org/software/wget/)
-5. [Winmerge](http://winmerge.org/)
-6. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
-7. [Visual Studio Code](https://code.visualstudio.com/)
+1. [WSL Ubuntu](https://docs.microsoft.com/en-us/windows/wsl/install)
+2. [Winmerge](http://winmerge.org/)
+3. [ScreenToGif](https://www.screentogif.com/)
+4. [Visual Studio Code](https://code.visualstudio.com/)
+5. [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
-To begin setup, launch Windows Terminal **as an admin** and paste in the following:
+To begin setup, launch Windows Terminal **as an admin** and paste in the following into the default (Powershell) terminal:
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tjaffri/ml-dev-pc-setup/master/setup.ps1'))
 ```
 
-> **Important Note**: After setup is complete, close the powershell window and open a fresh one to continue. For the subsequent commands you can use either ``Powershell`` or ``Git Bash`` (pick your poison). I use ``Git Bash`` to help ease muscle memory when working across platforms. If you want to do the same, you might find the ``.bash_profile`` file in this repo useful to enable conda, set the path for nodejs automatically, and create some useful aliases. You can simply do ``code ~/.bash_profile`` from a ``Git Bash`` window and paste in the contents (relaunch ``Git Bash`` for this to take effect).
+> **Important Note**: After setup is complete, close the powershell window. We continue below inside WSL Ubuntu.
+
+Take a moment and pin more tools to your taskbar. I prefer to pin `Winmerge`, `ScreenToGif` and `Visual Studio Code` at this point.
 
 # 3. Configure Visual Studio Code
 After ``setup.ps1`` is complete, and before you launch Visual Studio Code, install and configure some extensions you will need. You may need another elevated prompt for this (launch git bash as administrator):
