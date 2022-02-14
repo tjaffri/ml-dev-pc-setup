@@ -1,7 +1,7 @@
 # Machine Learning Dev PC Setup
 Quick way to consistently set up a new PC with my personal dev preferences for Machine Learning.
 
-> **_Tested most recently on a Surface Book 3, Intel Core i7-1065G7 (no GPU) and Windows 10 Pro 20H2**
+> **_Tested most recently on a custom built desktop with RTX 3080 GPU and Windows 11**
 
 # 1. Set up OS and Productivity Tools
 1. Unbox and admire your shiny new hardware. Go through default OS setup.
@@ -12,7 +12,7 @@ Quick way to consistently set up a new PC with my personal dev preferences for M
 6. Download Teams (or other chat service e.g. Teams, Slack), instructions will vary. Sign in.
 7. Clean up Taskbar. Remove extraneous items and pin Teams, Slack Outlook, etc.
 8. Set up printers / peripherals as needed.
-9. Intall Windows Terminal from the Windows Store: https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab and pin it to the taskbar.
+9. Launch Windows Terminal (from Start / Search) and pin it to the taskbar.
 
 # 2. Set up Dev Tools
 See comments in ``setup.ps1`` for more information. This is an automated script that installs:
@@ -24,9 +24,8 @@ See comments in ``setup.ps1`` for more information. This is an automated script 
 5. [Winmerge](http://winmerge.org/)
 6. [miniconda3](https://conda.io/miniconda.html) - this includes python 3 by default.
 7. [Visual Studio Code](https://code.visualstudio.com/)
-8. [Google Chrome](https://www.google.com/chrome/)
 
-To begin setup, launch Powershell **as an admin** and paste in the following:
+To begin setup, launch Windows Terminal **as an admin** and paste in the following:
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tjaffri/ml-dev-pc-setup/master/setup.ps1'))
