@@ -15,14 +15,19 @@ Quick way to consistently set up a new PC with my personal dev preferences for M
 8. Set up printers / peripherals as needed.
 9. Launch Windows Terminal (from Start / Search) and pin it to the taskbar.
 
-# 2. Set up Dev Tools
+# 2. Set up Dev Tools in Windows
 See comments in ``setup.ps1`` for more information. This is an automated script that installs:
 
 1. [WSL Ubuntu](https://docs.microsoft.com/en-us/windows/wsl/install)
 2. [Winmerge](http://winmerge.org/)
-3. [ScreenToGif](https://www.screentogif.com/)
-4. [Visual Studio Code](https://code.visualstudio.com/)
-5. [Docker Desktop](https://www.docker.com/products/docker-desktop)
+3. [Git](https://gitforwindows.org/)
+4. [Git LFS](https://github.com/git-lfs)
+5. [ScreenToGif](https://www.screentogif.com/)
+6. [Visual Studio Code](https://code.visualstudio.com/)
+7. [Docker Desktop](https://www.docker.com/products/docker-desktop)
+8. [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/#overview)
+9. [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/)
+10. [AWS CLI](https://aws.amazon.com/cli/)
 
 To begin setup, launch Windows Terminal **as an admin** and paste in the following into the default (Powershell) terminal:
 
@@ -30,11 +35,27 @@ To begin setup, launch Windows Terminal **as an admin** and paste in the followi
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tjaffri/ml-dev-pc-setup/master/setup.ps1'))
 ```
 
-> **Important Note**: After setup is complete, close the powershell window and then RESTART your machine. We continue below inside WSL Ubuntu.
+After all tools are installed, close the terminal window above and open a new default (Powershell) Terminal. Then perform some basic config as follows:
+
+```powershell
+git config --global user.name "<First Last>"
+git config --global user.email <alias>@yourcompany.com
+git lfs install --skip-smudge
+
+aws configure
+```
+
+In Terminal, open a new window with the "Azure Cloud Shell" profile, then enter the following command and follow instructions:
+
+```powershell
+az login
+```
 
 Take a moment and pin some more tools to your taskbar. I prefer to pin `Winmerge`, `ScreenToGif` and `Visual Studio Code` at this point.
 
-# 3. Configure WSL Ubuntu and VS Code Environment
+> **Important Note**: At this point, RESTART your machine. We continue below inside WSL Ubuntu.
+
+# 3. Set up Dev Tools in WSL Ubuntu
 After the restart above, Ubuntu should launch automatically. If not, you can launch it yourself (Search for it in Start). On first run, you will be asked to specify a username and password for the Ubuntu instance.
 
 Take a moment and make Ubuntu the default in Windows Terminal. See instructions [here](https://www.howtogeek.com/720524/how-to-change-the-default-shell-in-windows-terminal/)
@@ -53,6 +74,8 @@ git lfs install --skip-smudge
 git config --global user.name "Your Name"
 git config --global user.email you@example.com
 ```
+
+3. Set up Git Credential Manager 
 
 2. Clone your repos, then make sure credentials are persisted:
     1. ``git clone https://.../foo.git``
