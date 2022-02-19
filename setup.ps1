@@ -12,3 +12,6 @@ winget install -e --id Microsoft.VisualStudioCode
 
 # Install Docker Desktop
 winget install -e --id Docker.DockerDesktop
+
+# Install Azure Storage Explorer
+winget install -e --id Microsoft.AzureStorageExplorer
